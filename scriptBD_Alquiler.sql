@@ -43,4 +43,18 @@ CREATE TABLE UBIGEO(
     CONSTRAINT CODUBI_PK PRIMARY KEY (CODUBI)
 );
 
-/* - */
+/*Verificar estructura de la tabla UBIGEO */}
+show COLUMNS in UBIGEO;
+/*Creamos la tabla VIVIENDA*/
+CREATE TABLE VIVIENDA(
+    CODVIV int,
+    DESCVIV varchar (150),
+    DIRVIV varchar (150),
+    UBIGEO_CODUBI char(6),
+    ESTADOVIVIENDA_CODESTVIV int,
+    TIPOVIVIENDA_CODTIPVIV int,
+    CONSTRAINT CODVIV_PK PRIMARY KEY(CODVIV)
+);
+
+/*Verificar que se ha creado la tabla*/
+show tables;

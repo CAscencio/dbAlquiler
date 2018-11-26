@@ -32,3 +32,15 @@ show tables;
 
 /*Mostar sus campos*/
 SHOW COLUMNS IN PERSONA;
+describe PERSONA;
+
+/*Crear la tabla UBIGEO*/
+CREATE TABLE UBIGEO(
+    CODUBI int,
+    DISTUBI varchar (100),
+    PROVUBI varchar (100),
+    DPTOUBI varchar (100),
+    CONSTRAINT CODUBI_PK PRIMARY KEY (CODUBI)
+);
+
+/* - */

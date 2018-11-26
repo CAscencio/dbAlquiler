@@ -58,3 +58,40 @@ CREATE TABLE VIVIENDA(
 
 /*Verificar que se ha creado la tabla*/
 show tables;
+
+/*Verificar los campos de la tabla VIVIENDA*/
+show COLUMNS in VIVIENDA;
+
+/*Crear tabla ESTADO_VIVIENDA*/
+CREATE TABLE ESTADO_VIVIENDA(
+    CODESTVIV int,
+    DESCESTVIV varchar (50),
+    CONSTRAINT CODESTVIV_PK PRIMARY KEY (CODESTVIV)
+);
+
+/*Crear tabla tipo Vivienda*/
+CREATE TABLE TIPO_VIVIENDA(
+    CODTIPVIV int,
+    DESCTIPVIV varchar (50),
+    CONSTRAINT CODTIPVIV_PK PRIMARY KEY (CODTIPVIV)
+);
+
+/*Crear la tabla ALQUILER*/
+CREATE TABLE ALQUILER(
+    CODALQ int,
+    FECINCALQ date,
+    PERSONA_PROP int,
+    PERSONA_INQ int,
+    CONSTRAINT CODALQ PRIMARY KEY (CODALQ)
+);
+
+/*Crear la tabla detalle Aquiler*/
+CREATE TABLE DETALLE_ALQUILER(
+    CODDETALQ int,
+    VIVIENDA_CODVIV int,
+    FECINICDETALQ date,
+    COSTDETALQ decimal (8,2),
+    ALQUILER_CODALQ int,
+    CONSTRAINT CODDETALQ PRIMARY KEY (CODDETALQ)
+);
+
